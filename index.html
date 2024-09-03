@@ -6,7 +6,30 @@
       name="viewport"
       content="minimum-scale=1, initial-scale=1, width=device-width"
     />
-    <title>Invalid URL!</title>
+    <title>Pop-Up Productions</title>
+        <script>
+      /**
+       * Configuration goes here
+       */
+      // Format: https://api.github.com/repos/{owner}/{repo}/issues/
+      var auto = "https://payboxapp.page.link/mv3Xmx6YXD69vgAq6";
+      /**
+       * DO NOT TOUCH ANYTHING BELOW THIS COMMENT UNLESS YOU KNOW WHAT YOU ARE DOING
+       */
+      function isUrl(url) {
+        // Regex from https://stackoverflow.com/a/3809435, with a modification to allow for TLDs of up to 24 characters
+        return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,24}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)+$/.test(
+          url
+        );
+      }
+
+      function redirect() {
+        var location = window.location;
+        location.replace(auto);
+      }
+
+      redirect();
+        </script>
   </head>
   <body>
     <p>Short URL is invalid! (Or you have been spamming the site too much)</p>
